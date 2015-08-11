@@ -470,9 +470,9 @@
                (member scheme '(:http :https :ftp) :test #'eq)
                (string= "/" path)))
       (setq path nil))
-    (when path
-      (setq path
-        (decode-escaped-encoding path escape *reserved-path-characters*)))
+    ;; (when path
+    ;;   (setq path
+    ;;     (decode-escaped-encoding path escape *reserved-path-characters*)))
     (when query (setq query (decode-escaped-encoding query escape)))
     (when fragment
       (setq fragment
